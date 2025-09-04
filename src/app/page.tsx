@@ -6,7 +6,7 @@ export default async function Home() {
 
   return (
     <HydrateClient>
-      <main>Landing Page</main>
+      <main>Landing Page gautham did some work</main>
     </HydrateClient>
   );
 }
