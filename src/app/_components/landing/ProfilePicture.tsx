@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-interface ProfileCardProps {
+interface ProfilePictureProps {
   image: string;
   leftGradient: string;
   rightGradient: string;
@@ -13,14 +13,14 @@ interface ProfileCardProps {
   className?: string;
 }
 
-export default function ProfileCard({
+export default function ProfilePicture({
   image,
   size = { width: 150, height: 150 },
   leftGradient,
   rightGradient,
   gradientDirection = "right",
   className,
-}: ProfileCardProps) {
+}: ProfilePictureProps) {
   return (
     <div className={cn("rounded-full p-1", className)}>
       <div className="rounded-full bg-white">

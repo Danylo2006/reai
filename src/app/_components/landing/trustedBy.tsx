@@ -1,6 +1,14 @@
-export default function TrustedBySection() {
+import { cn } from "@/lib/utils";
+
+export default function TrustedBySection({
+  className,
+}: {
+  className?: string;
+}) {
   return (
-    <div className="shrink-0 border-t border-gray-200 py-6">
+    <div
+      className={cn("shrink-0 rounded-full py-16 backdrop-blur-md", className)}
+    >
       <div className="mb-4 text-center">
         <p className="text-gray-600">
           Trusted by <span className="font-semibold text-black">800K+</span>{" "}
