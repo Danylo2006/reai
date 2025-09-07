@@ -4,7 +4,7 @@ import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 
 import { TRPCReactProvider } from "@/trpc/react";
-import Header from "./_components/header";
+import Header from "@/app/_components/header";
 
 export const metadata: Metadata = {
   title: "REAI",
