@@ -21,10 +21,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable}`}>
-      <body>
+    <html lang="en" className={`${geist.variable} h-full`}>
+      <body className="flex h-full flex-col">
         <Header />
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <TRPCReactProvider>
+          <div className="flex flex-1 flex-col">{children}</div>
+        </TRPCReactProvider>
       </body>
     </html>
   );
