@@ -28,7 +28,7 @@ function HeroSection() {
           <div className="flex flex-col gap-4 sm:flex-row">
             <Button
               size="2xl"
-              className="rounded-full bg-gradient-to-r from-indigo-600 via-fuchsia-500 to-rose-500 px-10 py-4 text-white shadow-lg shadow-fuchsia-200 hover:from-indigo-700 hover:via-fuchsia-600 hover:to-rose-600 focus-visible:ring-2 focus-visible:ring-fuchsia-400"
+              className="rounded-full bg-[#bb7ff6] px-10 py-4 text-white shadow-lg shadow-[#ffd1e6]/60 hover:bg-[#cba8ef] focus-visible:ring-2 focus-visible:ring-[#FFB0D4]"
             >
               Get started
             </Button>
@@ -159,7 +159,7 @@ export default async function LandingPage() {
         <div className="pointer-events-none absolute right-3/5 bottom-1/4 z-0 h-[100vh] w-[100vw] rounded-full bg-[radial-gradient(circle_at_30%_50%,rgba(168,186,255,0.6),rgba(255,176,212,0.35)_45%,rgba(255,255,255,0)_90%)] blur-2xl" />
 
         {/* Main Content */}
-        <main className="relative container mx-auto flex min-h-0 flex-1 flex-col justify-between p-8 sm:px-6 lg:px-8">
+        <main className="relative container mx-auto mt-[72px] flex min-h-0 flex-1 flex-col justify-between p-8 sm:px-6 lg:px-8">
           <HeroSection />
           <TrustedBySection />
         </main>

@@ -1,11 +1,21 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Logo from "@/app/_components/logo";
 
 export default function Header() {
+  const pathname = usePathname();
+  const isLandingPage = pathname === "/";
+
   return (
-    <header className="shrink-0 border-b border-gray-100">
+    <header
+      className={`${
+        isLandingPage
+          ? "absolute top-0 right-0 left-0 z-50"
+          : "relative border-b border-gray-100 bg-white"
+      }`}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-18 items-center justify-between">
           {/* Navigation */}
