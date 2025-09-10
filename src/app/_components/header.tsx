@@ -18,6 +18,10 @@ export default function Header() {
         <div className="flex h-18 items-center justify-between">
           {/* Navigation */}
 
+          <div className="flex items-center md:hidden">
+            <Logo />
+          </div>
+
           <nav className="hidden items-center space-x-10 md:flex">
             <Logo />
             <Link
@@ -36,17 +40,17 @@ export default function Header() {
 
           <div className="flex items-center justify-between space-x-5">
             {/* Login and Sign up */}
-            <div className="flex items-center space-x-5">
+            <div className="flex items-center space-x-3 sm:space-x-5">
               <Button
                 variant="ghost"
-                size="lg"
-                className="rounded-full text-base text-gray-700"
+                size="sm"
+                className="md:size-lg rounded-full text-sm text-gray-700 sm:text-base"
               >
                 Log in
               </Button>
               <Button
-                size="lg"
-                className="rounded-full bg-black px-10 text-base text-white hover:bg-gray-800"
+                size="sm"
+                className="md:size-lg rounded-full bg-black px-4 text-sm text-white hover:bg-gray-800 sm:px-6 md:px-10 md:text-base"
               >
                 Sign up
               </Button>

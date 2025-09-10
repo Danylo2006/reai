@@ -3,23 +3,24 @@ import { Button } from "@/components/ui/button";
 import TrustedBySection from "@/app/_components/landing/trustedBy";
 import ProfileCard from "../_components/landing/ProfilePicture";
 import GlassCard from "../_components/landing/GlassCard";
+import AnimatedBackground from "@/components/AnimatedBackground";
 import { BadgeCheck, Mic, MessageSquare } from "lucide-react";
 
 // Hero Section Component
 function HeroSection() {
   return (
-    <div className="flex-1 py-6">
+    <div className="flex-1">
       {/* Main content container */}
       <div className="grid h-full items-center gap-12 lg:grid-cols-2">
         {/* Left column - title, subtitle, and action buttons */}
-        <div className="space-y-4 px-10 py-6">
+        <div className="space-y-12 px-4 py-6 md:space-y-16 md:px-10 md:py-6">
           <div className="space-y-6">
-            <h1 className="text-8xl leading-tight text-black">
+            <h1 className="text-6xl leading-tight text-black md:text-8xl">
               <span className="font-bold">A new way</span>
               <br />
               <span className="font-serif italic">to work.</span>
             </h1>
-            <p className="max-w-lg text-3xl leading-relaxed text-gray-600">
+            <p className="max-w-lg text-xl leading-relaxed text-gray-600 md:text-3xl">
               Build, manage and grow your flexible workforce — all in one place.
             </p>
           </div>
@@ -149,13 +150,12 @@ function HeroSection() {
 export default async function LandingPage() {
   return (
     <HydrateClient>
-      <div className="relative flex h-full flex-col overflow-hidden bg-white">
-        {/* Background gradient circle (positioned relative to viewport) */}
-        <div className="pointer-events-none absolute -right-7/10 -bottom-1/4 z-0 h-[100vh] w-[100vw] rounded-full bg-[radial-gradient(circle_at_30%_30%,rgba(168,186,255,0.6),rgba(255,176,212,0.35)_45%,rgba(255,255,255,0)_70%)] blur-2xl" />
-        <div className="pointer-events-none absolute right-3/5 bottom-1/4 z-0 h-[100vh] w-[100vw] rounded-full bg-[radial-gradient(circle_at_30%_50%,rgba(168,186,255,0.6),rgba(255,176,212,0.35)_45%,rgba(255,255,255,0)_90%)] blur-2xl" />
+      <div className="relative flex h-full flex-col overflow-hidden">
+        {/* Animated Background */}
+        <AnimatedBackground />
 
         {/* Main Content */}
-        <main className="relative container mx-auto mt-[72px] flex min-h-0 flex-1 flex-col justify-between p-8 sm:px-6 lg:px-8">
+        <main className="relative container mx-auto mt-20 flex min-h-0 flex-1 flex-col justify-between px-6 py-0 sm:mt-24">
           <HeroSection />
           <TrustedBySection />
         </main>
