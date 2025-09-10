@@ -9,7 +9,7 @@ export default function Simulator() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "welcome-1",
-      role: "assistant",
+      role: "ai",
       content:
         "Hi! I'm your practice agent. Click 'Start Agent' to begin our voice conversation.",
     },

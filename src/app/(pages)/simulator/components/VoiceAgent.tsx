@@ -27,7 +27,7 @@ export default function VoiceAgent({ onMessage }: VoiceAgentProps) {
       console.log("Connected to voice agent");
       onMessage({
         id: `connected-${Date.now()}`,
-        role: "assistant",
+        role: "ai",
         content: "🎤 Connected! Start speaking to begin the conversation.",
       });
     },
@@ -35,7 +35,7 @@ export default function VoiceAgent({ onMessage }: VoiceAgentProps) {
       console.log("Disconnected from voice agent");
       onMessage({
         id: `disconnected-${Date.now()}`,
-        role: "assistant",
+        role: "ai",
         content: "🔇 Conversation ended.",
       });
     },
@@ -52,10 +52,10 @@ export default function VoiceAgent({ onMessage }: VoiceAgentProps) {
             role: "user",
             content: props.message,
           });
-        } else if (props.source === "assistant") {
+        } else if (props.source === "ai") {
           onMessage({
             id: messageId,
-            role: "assistant",
+            role: "ai",
             content: props.message,
           });
         }
@@ -67,6 +67,11 @@ export default function VoiceAgent({ onMessage }: VoiceAgentProps) {
   });
 
   const startConversation = async () => {
+    if (!env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID) {
+      console.error("ElevenLabs Agent ID is not configured");
+      return;
+    }
+
     try {
       const conversationId = await conversation.startSession({
         agentId: env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID,

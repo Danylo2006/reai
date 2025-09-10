@@ -22,7 +22,7 @@ export const env = createEnv({
     // Uncomment if you need Supabase for auth/storage/other features
     // NEXT_PUBLIC_SUPABASE_URL: z.string(),
     // NEXT_PUBLIC_SUPABASE_ANON_KEY: z.string(),
-    NEXT_PUBLIC_ELEVENLABS_AGENT_ID: z.string(),
+    NEXT_PUBLIC_ELEVENLABS_AGENT_ID: z.string().optional(), // @Danylo2006: Make this mandatory
   },
 
   /**

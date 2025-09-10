@@ -1,8 +1,7 @@
 /**
  * The roles of a message
  */
-export const roles = ["assistant", "user", "system"] as const;
-export type Role = (typeof roles)[number];
+export type Role = "ai" | "user" | "system";
 
 /**
  * A message in the chat

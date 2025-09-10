@@ -11,7 +11,7 @@ export default function MessageBubble({ message }: MessageBubbleProps) {
     >
       <div
         className={`max-w-[80%] rounded-lg px-3 py-2 text-sm leading-relaxed ${
-          message.role === "assistant"
+          message.role === "ai"
             ? "bg-blue-50 text-blue-900"
             : "bg-gray-100 text-gray-900"
         }`}
