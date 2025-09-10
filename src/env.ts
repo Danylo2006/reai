@@ -22,6 +22,7 @@ export const env = createEnv({
     // Uncomment if you need Supabase for auth/storage/other features
     // NEXT_PUBLIC_SUPABASE_URL: z.string(),
     // NEXT_PUBLIC_SUPABASE_ANON_KEY: z.string(),
+    NEXT_PUBLIC_ELEVENLABS_AGENT_ID: z.string(),
   },
 
   /**
@@ -31,6 +32,8 @@ export const env = createEnv({
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
     DATABASE_URL: process.env.DATABASE_URL,
+    NEXT_PUBLIC_ELEVENLABS_AGENT_ID:
+      process.env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID,
     // Uncomment if you need Supabase for auth/storage/other features
     // SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY,
     // NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,

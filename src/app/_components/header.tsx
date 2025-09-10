@@ -11,9 +11,7 @@ export default function Header() {
   return (
     <header
       className={`${
-        isLandingPage
-          ? "absolute top-0 right-0 left-0 z-50"
-          : "relative border-b border-gray-100 bg-white"
+        isLandingPage ? "absolute top-0 right-0 left-0 z-50" : "relative"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,16 +21,16 @@ export default function Header() {
           <nav className="hidden items-center space-x-10 md:flex">
             <Logo />
             <Link
+              href="/dashboard"
+              className="text-base font-medium text-gray-700 transition-colors hover:text-black"
+            >
+              Dashboard
+            </Link>
+            <Link
               href="/simulator"
               className="text-base font-medium text-gray-700 transition-colors hover:text-black"
             >
               Simulator
-            </Link>
-            <Link
-              href="#"
-              className="text-base font-medium text-gray-700 transition-colors hover:text-black"
-            >
-              Resources
             </Link>
           </nav>
 
@@ -42,7 +40,7 @@ export default function Header() {
               <Button
                 variant="ghost"
                 size="lg"
-                className="text-base text-gray-700"
+                className="rounded-full text-base text-gray-700"
               >
                 Log in
               </Button>

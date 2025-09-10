@@ -1,10 +1,9 @@
 import { HydrateClient } from "@/trpc/server";
 import { Button } from "@/components/ui/button";
-import Footer from "@/app/_components/landing/footer";
 import TrustedBySection from "@/app/_components/landing/trustedBy";
 import ProfileCard from "../_components/landing/ProfilePicture";
 import GlassCard from "../_components/landing/GlassCard";
-import { BadgeCheck, Mic, MessageSquare, Sparkles } from "lucide-react";
+import { BadgeCheck, Mic, MessageSquare } from "lucide-react";
 
 // Hero Section Component
 function HeroSection() {
@@ -97,9 +96,6 @@ function HeroSection() {
                         Instant feedback & scoring
                       </span>
                     </div>
-                    <span className="rounded-full bg-purple-100 px-2.5 py-0.5 text-xs font-semibold text-purple-700">
-                      AI COACH
-                    </span>
                   </div>
 
                   <div className="mt-2 flex items-center gap-2">
